@@ -85,3 +85,7 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
     Obtener estadísticas sobre configuraciones de usuario, como idioma preferido o velocidad de reproducción.
 
     Examinar el uso regional del servicio para ajustar catálogos locales según demanda.
+
+## Diagrama Entidad-Relación
+![Copia de Dibujo sin título](https://github.com/user-attachments/assets/53e2b671-63eb-4a02-87ca-c57c6dc4bfc4)
+
