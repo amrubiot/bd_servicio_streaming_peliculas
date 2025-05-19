@@ -40,7 +40,7 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
     Define las características del plan como precio, resolución y dispositivos.
 
-🎥 Contenido
+🎥 Película
 
     Información detallada de cada película disponible en la plataforma.
 
