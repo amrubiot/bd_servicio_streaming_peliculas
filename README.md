@@ -24,39 +24,39 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
 ## 📦 Entidades clave
 
-👤 Usuario
+👤 usuario
 
     Datos personales y estado de la cuenta.
 
-🧑‍💻 Perfil
+🧑‍💻 perfil
 
     Identificación individual dentro de una cuenta (ideal para familias o grupos).
 
-💳 HistorialSuscripcion
+💳 historial_suscripcion
 
     Registro de cada contratación de plan por parte del usuario.
 
-📦 PlanSuscripcion
+📦 plan_suscripcion
 
     Define las características del plan como precio, resolución y dispositivos.
 
-🎥 Películas
+🎥 pelicula
 
     Información detallada de cada película disponible en la plataforma.
 
-📈 Sesion
+📈 sesion
 
     Registro de inicio de sesión de un perfil desde un dispositivo específico.
 
-🎞️ HistorialVisualizacion
+🎞️ historial_visualizacion
 
     Lo que se vio en cada sesión (película, fecha, minutos vistos, si fue recomendado, etc.).
 
-⭐ Valoracion
+⭐ valoracion
 
     Comentarios y puntuaciones del perfil sobre películas vistas.
 
-⚙️ Preferencias
+⚙️ preferencias
 
     Configuraciones personalizadas de visualización por perfil.
 
