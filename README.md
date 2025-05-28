@@ -1,4 +1,4 @@
-# Gestión de Visualización y Preferencias en el Servicio de Streaming CineStream
+# Gestión de Visualización e Historial de Suscripciones en el Servicio de Streaming CineStream
 
 CineStream es una plataforma de streaming especializada en películas. La empresa busca implementar una base de datos que permita registrar la actividad de los usuarios, sus perfiles y sesiones, así como los contenidos visualizados, valoraciones, planes de suscripción y configuraciones de preferencias.
 
