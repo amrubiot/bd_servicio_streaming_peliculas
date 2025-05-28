@@ -86,5 +86,6 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 ![Copia de Dibujo sin título](https://github.com/user-attachments/assets/53e2b671-63eb-4a02-87ca-c57c6dc4bfc4)
 
 ## Diseño lógico
-![Untitled](https://github.com/user-attachments/assets/491ecbb0-eeb8-41b7-9160-81d73e83ea8d)
+![Untitled](https://github.com/user-attachments/assets/981a5e15-95a6-49e3-8201-28da3d4bcf2f)
+
 
