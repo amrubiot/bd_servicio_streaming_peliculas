@@ -85,7 +85,10 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 ## Diagrama Entidad-Relación
 ![Copia de Dibujo sin título](https://github.com/user-attachments/assets/53e2b671-63eb-4a02-87ca-c57c6dc4bfc4)
 
-## Diseño lógico
+## Diseño Lógico
 ![Untitled](https://github.com/user-attachments/assets/981a5e15-95a6-49e3-8201-28da3d4bcf2f)
+
+## Modelo Físico
+![diagrama](https://github.com/user-attachments/assets/784e2c12-b4b5-468b-87c5-c88d3cafbaf8)
 
 
