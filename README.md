@@ -14,7 +14,7 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
     Identificar si el contenido fue reproducido por recomendación.
 
-    Registrar valoraciones y comentarios por parte del usuario.
+    Registrar valoraciones y comentarios por parte de un perfil.
 
     Gestionar planes de suscripción y cambios históricos.
 
@@ -24,7 +24,7 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
 ## 📦 Entidades clave
 
-👤 usuario
+👤 cuenta
 
     Datos personales y estado de la cuenta.
 
@@ -62,11 +62,11 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
 ## 📘 Reglas de funcionamiento
 
-    El número de perfiles permitidos por usuario depende del plan de suscripción contratado.
+    El número de perfiles permitidos por cuenta depende del plan de suscripción contratado.
 
     Cada sesión es exclusiva de un único perfil y registra el dispositivo y la IP de acceso.
 
-    Una visualización se considera completa si el usuario ha visto más del 80% del contenido.
+    Una visualización se considera completa si un perfil ha visto más del 80% del contenido.
 
     El sistema registra si una película fue reproducida porque fue recomendada, para medir el impacto del motor de recomendaciones.
 
@@ -76,13 +76,9 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 
     Detectar qué contenidos recomendados fueron efectivamente terminados por los usuarios.
 
-    Identificar los géneros de películas más vistos por grupos etarios específicos (niños, jóvenes, adultos).
-
     Analizar patrones de uso en perfiles que inician sesión desde múltiples dispositivos o ubicaciones.
 
     Evaluar el rendimiento de películas según duración media visualizada, no solo cantidad de reproducciones.
-
-    Obtener estadísticas sobre configuraciones de usuario, como idioma preferido o velocidad de reproducción.
 
     Examinar el uso regional del servicio para ajustar catálogos locales según demanda.
 
@@ -90,5 +86,5 @@ El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la ex
 ![Copia de Dibujo sin título](https://github.com/user-attachments/assets/53e2b671-63eb-4a02-87ca-c57c6dc4bfc4)
 
 ## Diseño lógico
-![Untitled](https://github.com/user-attachments/assets/f58324eb-2177-4a6e-a34d-c28149838d3c)
+![Untitled](https://github.com/user-attachments/assets/491ecbb0-eeb8-41b7-9160-81d73e83ea8d)
 
