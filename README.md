@@ -9,12 +9,12 @@ Se requiere un sistema de base de datos relacional que centralice esta informaci
 
 ## Objetivos específicos:
 
-●	Registrar múltiples perfiles por cuenta con atributos personalizados y control parental.
-●	Gestionar eficientemente las sesiones iniciadas desde distintos dispositivos y ubicaciones.
-●	Almacenar y consultar historiales de visualización detallados.
-●	Relacionar valoraciones y comentarios a visualizaciones previas de contenido.
-●	Registrar y analizar cambios en las suscripciones, junto con sus características y pagos.
-●	Permitir consultas para medir tendencias de consumo, comportamiento del usuario y rendimiento del contenido.
+    ●	Registrar múltiples perfiles por cuenta con atributos personalizados y control parental.
+    ●	Gestionar eficientemente las sesiones iniciadas desde distintos dispositivos y ubicaciones.
+    ●	Almacenar y consultar historiales de visualización detallados.
+    ●	Relacionar valoraciones y comentarios a visualizaciones previas de contenido.
+    ●	Registrar y analizar cambios en las suscripciones, junto con sus características y pagos.
+    ●	Permitir consultas para medir tendencias de consumo, comportamiento del usuario y rendimiento del contenido.
 
 
 ## 📦 Entidades clave
@@ -59,19 +59,19 @@ Se requiere un sistema de base de datos relacional que centralice esta informaci
 
 ## Desafíos:
 
-●	La plataforma debe manejar múltiples perfiles por cuenta sin conflictos, permitiendo configuraciones y preferencias únicas.
-●	Es necesario registrar correctamente las sesiones iniciadas por distintos perfiles desde diversos dispositivos, incluyendo duración, IP y estado.
-●	Se requiere un registro detallado del contenido visto, tiempo de visualización y si fue sugerido por el algoritmo, para mejorar recomendaciones.
-●	Las valoraciones y comentarios aportan valor, pero deben validarse y relacionarse correctamente con las visualizaciones.
-●	Se deben registrar los cambios de suscripción, renovaciones y métodos de pago de forma clara y accesible para análisis posterior.
+    ●	La plataforma debe manejar múltiples perfiles por cuenta sin conflictos, permitiendo configuraciones y preferencias únicas.
+    ●	Es necesario registrar correctamente las sesiones iniciadas por distintos perfiles desde diversos dispositivos, incluyendo duración, IP y estado.
+    ●	Se requiere un registro detallado del contenido visto, tiempo de visualización y si fue sugerido por el algoritmo, para mejorar recomendaciones.
+    ●	Las valoraciones y comentarios aportan valor, pero deben validarse y relacionarse correctamente con las visualizaciones.
+    ●	Se deben registrar los cambios de suscripción, renovaciones y métodos de pago de forma clara y accesible para análisis posterior.
 
 ## Beneficios esperados:
 
-•	Optimización de la personalización: Al tener preferencias y visualizaciones bien registradas, se mejora la precisión del motor de recomendaciones.
-•	Análisis profundo de uso: El sistema permitirá conocer qué contenido tiene mayor retención o aceptación entre distintos grupos de usuarios.
-•	Mejora en la gestión del servicio: Información centralizada facilita la toma de decisiones sobre planes, contenidos y segmentación de mercado.
-•	Aumento de la satisfacción del usuario: La plataforma podrá adaptarse mejor a los hábitos y gustos de cada perfil, mejorando la experiencia general.
-•	Soporte para expansión futura: La base de datos está preparada para escalar a más usuarios, más dispositivos y nuevos planes de suscripción sin pérdida de eficiencia.
+    •	Optimización de la personalización: Al tener preferencias y visualizaciones bien registradas, se mejora la precisión del motor de recomendaciones.
+    •	Análisis profundo de uso: El sistema permitirá conocer qué contenido tiene mayor retención o aceptación entre distintos grupos de usuarios.
+    •	Mejora en la gestión del servicio: Información centralizada facilita la toma de decisiones sobre planes, contenidos y segmentación de mercado.
+    •	Aumento de la satisfacción del usuario: La plataforma podrá adaptarse mejor a los hábitos y gustos de cada perfil, mejorando la experiencia general.
+    •	Soporte para expansión futura: La base de datos está preparada para escalar a más usuarios, más dispositivos y nuevos planes de suscripción sin pérdida de eficiencia.
 
 ## Diagrama Entidad-Relación
 ![Copia de Dibujo sin título](https://github.com/user-attachments/assets/34888973-87e6-4694-8f49-6eb6390e50df)
