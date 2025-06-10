@@ -1,94 +1,83 @@
-# Gestión de Visualización e Historial de Suscripciones en el Servicio de Streaming CineStream
+# Gestión de Base de Datos para un Servicio de Streaming de Películas
 
-CineStream es una plataforma de streaming especializada en películas. La empresa busca implementar una base de datos que permita registrar la actividad de los usuarios, sus perfiles y sesiones, así como los contenidos visualizados, valoraciones, planes de suscripción y configuraciones de preferencias.
+Una empresa dedicada a ofrecer servicios de streaming de películas gestiona una plataforma en línea donde los usuarios pueden acceder a contenido audiovisual bajo demanda. Esta plataforma permite a los usuarios crear múltiples perfiles por cuenta, visualizar contenido desde diversos dispositivos, valorar las películas vistas y configurar sus preferencias de visualización.
 
-El objetivo es conocer mejor el comportamiento de los usuarios y optimizar la experiencia personalizada mediante el análisis de datos como lo que ven, cuándo lo ven, cuánto tiempo, y cómo califican el contenido.
+A medida que la base de usuarios crece, la administración de la información relacionada a perfiles, sesiones, historiales de visualización, valoraciones, planes de suscripción y configuraciones individuales se vuelve cada vez más compleja y difícil de mantener.
 
-🎯 Objetivos del sistema
+Se requiere un sistema de base de datos relacional que centralice esta información, permita registrar eficientemente la actividad de los usuarios y facilite el análisis del comportamiento de consumo. Este sistema busca mejorar la personalización del servicio y apoyar la toma de decisiones estratégicas basadas en datos reales.
 
-    Registrar múltiples perfiles por cuenta de usuario.
 
-    Controlar cada sesión de visualización iniciada por un perfil.
+## Objetivos específicos:
 
-    Almacenar historiales de visualización detallados.
+●	Registrar múltiples perfiles por cuenta con atributos personalizados y control parental.
+●	Gestionar eficientemente las sesiones iniciadas desde distintos dispositivos y ubicaciones.
+●	Almacenar y consultar historiales de visualización detallados.
+●	Relacionar valoraciones y comentarios a visualizaciones previas de contenido.
+●	Registrar y analizar cambios en las suscripciones, junto con sus características y pagos.
+●	Permitir consultas para medir tendencias de consumo, comportamiento del usuario y rendimiento del contenido.
 
-    Identificar si el contenido fue reproducido por recomendación.
-
-    Registrar valoraciones y comentarios por parte de un perfil.
-
-    Gestionar planes de suscripción y cambios históricos.
-
-    Configurar preferencias individuales de visualización.
-
-    Permitir consultas sobre tendencias de consumo, satisfacción del usuario y rendimiento del contenido.
 
 ## 📦 Entidades clave
 
-👤 cuenta
+👤 Cuenta
 
-    Datos personales y estado de la cuenta.
+    Representa a los usuarios que se registran en la plataforma. Cada cuenta puede tener múltiples perfiles asociados.
 
-🧑‍💻 perfil
+🧑‍💻 Perfil
 
-    Identificación individual dentro de una cuenta (ideal para familias o grupos).
+    Define identidades personalizadas dentro de una cuenta (por ejemplo, perfiles para cada miembro de una familia). Permite activar el control parental y especificar si se trata del perfil principal creado      junto con la cuenta.
 
-💳 historial_suscripcion
+⚙️ Preferencias
 
-    Registro de cada contratación de plan por parte del usuario.
+    Almacena configuraciones personalizadas por perfil, como idioma de la aplicación, preferencias de audio y subtítulos, y opciones de visualización.
 
-📦 plan_suscripcion
+📦 Plan de suscripción
 
-    Define las características del plan como precio, resolución y dispositivos.
+    Contiene los distintos tipos de planes que ofrece el servicio, con características como resolución, precio y cantidad de dispositivos permitidos.
+    
+💳 Historial de suscripción
 
-🎥 pelicula
+    Registra las suscripciones realizadas por cada cuenta a lo largo del tiempo, incluyendo fechas, estado y método de pago.
 
-    Información detallada de cada película disponible en la plataforma.
+🎥 Pelicula
 
-📈 sesion
+    Almacena información sobre el catálogo de contenido disponible, incluyendo metadatos útiles para búsqueda y recomendaciones.
 
-    Registro de inicio de sesión de un perfil desde un dispositivo específico.
+📈 Sesion
 
-🎞️ historial_visualizacion
+    Representa una instancia de uso de la plataforma desde un dispositivo específico por parte de un perfil.
 
-    Lo que se vio en cada sesión (película, fecha, minutos vistos, si fue recomendado, etc.).
+🎞️ Historial de visualización
 
-⭐ valoracion
+    Registra qué contenido ha sido visualizado por cada perfil durante una sesión.
 
-    Comentarios y puntuaciones del perfil sobre películas vistas.
+⭐ Valoracion
 
-⚙️ preferencias
+    Permite a los perfiles dejar puntuaciones y comentarios sobre las películas vistas, enriqueciendo el sistema de recomendación y retroalimentación.
 
-    Configuraciones personalizadas de visualización por perfil.
 
-## 📘 Reglas de funcionamiento
 
-    El número de perfiles permitidos por cuenta depende del plan de suscripción contratado.
+## Desafíos:
 
-    Cada sesión es exclusiva de un único perfil y registra el dispositivo y la IP de acceso.
+●	La plataforma debe manejar múltiples perfiles por cuenta sin conflictos, permitiendo configuraciones y preferencias únicas.
+●	Es necesario registrar correctamente las sesiones iniciadas por distintos perfiles desde diversos dispositivos, incluyendo duración, IP y estado.
+●	Se requiere un registro detallado del contenido visto, tiempo de visualización y si fue sugerido por el algoritmo, para mejorar recomendaciones.
+●	Las valoraciones y comentarios aportan valor, pero deben validarse y relacionarse correctamente con las visualizaciones.
+●	Se deben registrar los cambios de suscripción, renovaciones y métodos de pago de forma clara y accesible para análisis posterior.
 
-    Una visualización se considera completa si un perfil ha visto más del 80% del contenido.
+## Beneficios esperados:
 
-    El sistema registra si una película fue reproducida porque fue recomendada, para medir el impacto del motor de recomendaciones.
-
-    Solo es posible calificar un contenido después de haberlo visto, total o parcialmente.
-
-## 🔍 Casos de uso para análisis de datos
-
-    Detectar qué contenidos recomendados fueron efectivamente terminados por los usuarios.
-
-    Analizar patrones de uso en perfiles que inician sesión desde múltiples dispositivos o ubicaciones.
-
-    Evaluar el rendimiento de películas según duración media visualizada, no solo cantidad de reproducciones.
-
-    Examinar el uso regional del servicio para ajustar catálogos locales según demanda.
+•	Optimización de la personalización: Al tener preferencias y visualizaciones bien registradas, se mejora la precisión del motor de recomendaciones.
+•	Análisis profundo de uso: El sistema permitirá conocer qué contenido tiene mayor retención o aceptación entre distintos grupos de usuarios.
+•	Mejora en la gestión del servicio: Información centralizada facilita la toma de decisiones sobre planes, contenidos y segmentación de mercado.
+•	Aumento de la satisfacción del usuario: La plataforma podrá adaptarse mejor a los hábitos y gustos de cada perfil, mejorando la experiencia general.
+•	Soporte para expansión futura: La base de datos está preparada para escalar a más usuarios, más dispositivos y nuevos planes de suscripción sin pérdida de eficiencia.
 
 ## Diagrama Entidad-Relación
-![Copia de Dibujo sin título](https://github.com/user-attachments/assets/53e2b671-63eb-4a02-87ca-c57c6dc4bfc4)
+![Copia de Dibujo sin título](https://github.com/user-attachments/assets/34888973-87e6-4694-8f49-6eb6390e50df)
 
 ## Diseño Lógico
-![Untitled](https://github.com/user-attachments/assets/981a5e15-95a6-49e3-8201-28da3d4bcf2f)
+![Untitled](https://github.com/user-attachments/assets/0d40dacf-52f4-4b11-accf-fbca4012d409)
 
 ## Modelo Físico
-![diagrama](https://github.com/user-attachments/assets/784e2c12-b4b5-468b-87c5-c88d3cafbaf8)
-
-
+![diagrama](https://github.com/user-attachments/assets/f3b44be7-20ad-4afa-b8b3-b668abc09301)
